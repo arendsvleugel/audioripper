@@ -23,7 +23,14 @@ if video_url:
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'quiet': True
+        'quiet': True,
+        'impersonate': 'chrome',  # NIEUW: Vermomt de server als een echte Chrome-browser
+        'extractor_args': {       # NIEUW: Vertelt YouTube welke speler-clients gebruikt moeten worden
+            'youtube': {
+                'player_client': ['web_embedded', 'mweb', 'android'], 
+            }
+        }
+
     }
     
     try:
