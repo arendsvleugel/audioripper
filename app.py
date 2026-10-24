@@ -5,7 +5,7 @@ import os
 # Webpagina configuratie
 st.set_page_config(page_title="Universal Audio Ripper", page_icon="🎵")
 st.title("🎵 Universal Audio Ripper")
-st.write("Plak een videolink (Facebook, YouTube, TikTok, Instagram, etc.) om de audio als MP3 te downloaden.")
+st.write("Plak een videolink (Facebook, VOORLOPIG GEEN YOUTUBE, TikTok, Instagram, etc.) om de audio als MP3 te downloaden.")
 
 # Input veld voor de URL
 video_url = st.text_input("Video of Audio URL:", placeholder="Plak je link hier...")
