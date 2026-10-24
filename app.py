@@ -24,10 +24,10 @@ if video_url:
             'preferredquality': '192',
         }],
         'quiet': True,
-        'impersonate': 'chrome-110',  # NIEUW: Vermomt de server als een echte Chrome-browser
-        'extractor_args': {       # NIEUW: Vertelt YouTube welke speler-clients gebruikt moeten worden
+        'extractor_args': {
             'youtube': {
-                'player_client': ['web_embedded', 'mweb', 'android'], 
+                # We dwingen mobiele clients af, deze omzeilen de 403 blokkade vaak zonder extra pakketten
+                'player_client': ['android', 'ios', 'mweb'] 
             }
         }
 
@@ -57,4 +57,7 @@ if video_url:
             
     except Exception as e:
         st.error(f"Er ging iets mis: {str(e)}")
+        error_details = traceback.format_exc()
+        st.error("meer zelfs, ik zou eggen, er ging iets mis")
+        st.code(error_details, language="text")
         st.warning("Tip: Controleer of de video openbaar is en de link klopt.")
