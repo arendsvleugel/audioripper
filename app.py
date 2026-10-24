@@ -28,7 +28,7 @@ if video_url:
     
     try:
         # Download en converteer de audio van de ingevoerde site
-        with yt-dlp.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             ydl.download([video_url])
         
         mp3_file = f"{output_filename}.mp3"
