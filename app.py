@@ -1,5 +1,5 @@
 import streamlit as st
-import yt-dlp
+import yt_dlp
 import os
 
 # Webpagina configuratie
